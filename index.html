@@ -1,0 +1,79 @@
+<html>
+<head>
+  <!--jQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <link rel='stylesheet' href='css/main.css' />
+  <link rel='stylesheet' href='css/forms.css' />
+  <link rel='stylesheet' href='css/toastr.css' />
+  <link rel='stylesheet' href='css/hint.css' />
+
+  <script src="https://unpkg.com/toastr@2.1.2"></script>
+  <script src="https://unpkg.com/clipboard@1.6.0/dist/clipboard.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.4.0/balloon.min.css">
+
+  <script src="js/master.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>Wistia GIF Thumbnail Embed Code</h1>
+      <h5>Automatically generate an embed code that uses a GIF as the video thumbnail</h5>
+      <div class="explainer">
+        <div class="explainer-text">
+          <ol>
+            <li>Enter the URL of the Wistia video</li>
+            <li>Enter the URL of the GIF</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <!-- FORM -->
+      <form action="index.html" method="post">
+        <h3>Video</h4>
+        <div class="input-field">
+          <input required id="wistiaURL" class="dynamic" type="text" name="wistiaURL" placeholder="youraccount.wistia.com/medias/aabbccddee">
+        </div>
+        <div class="input-field">
+          <h3>GIF</h3>
+          <input required id="gifURL" class="dynamic" type="text" name="gifURL" placeholder="yourwebsite.com/images/GIF.gif">
+        </div>
+        <button cta-label="Get embed code" class="button" id="getEmbed" disabled="true" type="button" name="getEmbed">Get embed code</button>
+      </form>
+
+      <!-- EMBED URL -->
+      <div data-clipboard-target="#url" cta-label="Embed URL Copied" data-balloon="Click to copy" data-balloon-pos="up" class="clipboard" aria-label="Click to copy">
+        <pre>
+          <code id="url">Embed code</code>
+        </pre>
+      </div>
+
+      <div class="video">
+        <h3>Video Embed</h3>
+        <script src="https://fast.wistia.com/assets/external/E-v1.js" async=""></script>
+        <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+          <div class="wistia_responsive_wrapper" style="height: 100%; left: 0; position: absolute; top: 0; width: 100%;">
+            <div id="videoEmbed" class="wistia_embed video-frame videoFoam=true" style="height: 100%; width: 100%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    var clipboard = new Clipboard('.clipboard');
+    clipboard.on('success', function(e) {
+      e.clearSelection();
+      toastr.success('Copied to clipboard.');
+    });
+  </script>
+</body>
+</html>

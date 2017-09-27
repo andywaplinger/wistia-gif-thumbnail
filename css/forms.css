@@ -1,0 +1,133 @@
+button,
+html,
+input {
+  color: rgba(#000, 0.87);
+}
+
+input::placeholder {
+  color: rgba(#000, 0.25) !important;
+  font-family: "Roboto", sans-serif;
+}
+
+.input-field {
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.input-field .extras {
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+form h3 {
+  margin-bottom: .5rem;
+}
+
+label.form {
+  position: absolute;
+
+  top: -12px;
+
+  font-size: .8rem;
+  font-weight: 500;
+
+  display: block;
+  line-height: 1;
+  color: rgba(#000, 0.38);
+
+  transition: all .2s;
+}
+
+input {
+    width: 600px;
+    box-sizing: border-box;
+    padding: 8px 0;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #E0E0E0;
+    transition: border-bottom .2s;
+    font-size: 15px;
+}
+
+input:active {
+      border-bottom: 2px solid #212121;
+    }
+
+input:focus {
+      border-bottom: 2px solid #212121;
+    }
+
+input.invalid {
+      border-bottom: 2px solid #e53935;
+    }
+
+input:not(:required):invalid {
+      border-bottom: 2px solid #e53935;
+    }
+
+    &:active,
+    &:focus + label {
+      color: rgba(#000, 0.87);
+
+      transition: all .2s;
+    }
+  }
+
+input label {
+  color: rgba(#000, 0.54);
+  position: relative;
+  padding-left: 26px;
+  margin-left: 8px;
+  cursor: pointer;
+  height: 20px;
+  line-height: 20px;
+  transition: background-color .2s, border .2s, color .2s;
+}
+
+input label:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 14px;
+  width: 14px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+  transition: background-color .2s, border .2s, color .2s;
+}
+
+input label:disabled {
+  color: rgba(#000, 0.38);
+}
+
+input label:before {
+  border: 2px solid #E0E0E0;
+}
+
+.button {
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+  background: #3dbbd0;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  border: 0;
+  margin-top: 8px;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:hover {
+  background: #64d2e4;
+  text-decoration: none;
+  outline: none;
+}
+
+.button:disabled {
+  color: rgba(#000, 0.38);
+  background-color: #E0E0E0;
+
+  cursor: default;
+}

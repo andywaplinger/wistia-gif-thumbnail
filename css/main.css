@@ -1,0 +1,113 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-weight: 500;
+}
+
+html {
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+h1 {
+  margin-bottom: 16px;
+  line-height: normal;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1360px;
+  width: 90%;
+  @media only screen and (min-width: 601px) {
+    width: 85%;
+  }
+  @media only screen and (min-width: 1201px) {
+    width: 72.5%;
+  }
+}
+
+code {
+  display: block;
+  cursor: pointer;
+  margin-top: 32px;
+  padding: 16px;
+  background-color: #E0E0E0;
+  border-radius: 2px;
+  word-break: break-all;
+  font-family: monospace;
+}
+
+header {
+  margin-top: 56px;
+  margin-bottom: 32px;
+
+  @media only screen and (max-width: 600px) {
+    margin-top: 20px;
+  }
+}
+
+main {
+  margin-bottom: 32px;
+}
+
+footer {
+  margin-bottom: 32px;
+  transition: border-bottom .2s
+}
+
+footer p { 
+  margin: 0;
+}
+
+footer a {
+  color: gba(#000, 0.87);;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 2px solid #E0E0E0;
+}
+
+footer:focus {
+  border-bottom: 2px solid rgba(#000, 0.87);
+  outline: none;
+}
+
+footer:hover {
+  border-bottom: 2px solid rgba(#000, 0.87);
+  outline: none;
+}
+
+.video {
+  max-width: 700px;
+  min-width: 608px;
+  min-height: 342px;
+  margin: 24px;
+  display: inline-block;
+}
+
+.video-frame {
+  border: 2px dashed #3dbbd0;
+}
+
+.explainer-text ol {
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+
+.explainer-text p {
+    margin-top: 8px;
+    color: rgba(#000, 0.38);
+}
+
+pre {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.primary-text { color: rgba(#000, 0.87); }
+.secondary-text { color: rgba(#000, 0.54); }
